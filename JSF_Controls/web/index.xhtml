@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:inputText value="Kedar"/><br/>
+            <h:inputTextarea rows="5" cols="10"/><br/>
+            <h:inputSecret id="pwd">
+                <h:outputLabel for="pwd" value="Enter Password: "/>
+            </h:inputSecret><br/>
+            <h:commandButton value="Submit" /><br/>
+            <h:outputText value="Sample Text"/><br/>
+            <h:outputLink value="https://www.google.com">
+                <h:outputText value="Google"/>
+            </h:outputLink><br/>
+            <h:outputFormat value="Welcome {0}">
+                <f:param value="Kedar"/>
+            </h:outputFormat>
+            <h:graphicImage alt="Image not found" value="imgs/google.jpg" title="Google Image" width="200"/> 
+            
+            <!-- select tags-->
+            <h:selectBooleanCheckbox/>
+            <h:outputText value="Accept Terms and Conditions"/>
+            
+            <h:selectOneListbox id="sol" value="Select Car Brand" size="5" title="select one option">
+            <f:selectItem id="si1" itemLabel="Audi" itemValue="11"/>    
+            <f:selectItem id="si2" itemLabel="BMW" itemValue="22"/>  
+            <f:selectItem id="si3" itemLabel="Mercedes" itemValue="33"/>  
+            <f:selectItem id="si4" itemLabel="Suzuki" itemValue="44"/>  
+            <f:selectItem id="si5" itemLabel="Hyundai" itemValue="55"/>
+            <f:selectItem id="si6" itemLabel="Volvo" itemValue="66"/>
+            </h:selectOneListbox>
+            
+             <h:selectOneMenu id="som" value="Select Car Brand" title="select one in this menu">
+            <f:selectItem id="s1" itemLabel="Audi" itemValue="11"/>    
+            <f:selectItem id="s2" itemLabel="BMW" itemValue="22"/>  
+            <f:selectItem id="s3" itemLabel="Mercedes" itemValue="33"/>  
+            <f:selectItem id="s4" itemLabel="Suzuki" itemValue="44"/>  
+            <f:selectItem id="s5" itemLabel="Hyundai" itemValue="55"/>
+            <f:selectItem id="s6" itemLabel="Volvo" itemValue="66"/>
+            </h:selectOneMenu>
+            
+             <h:selectOneRadio id="sor" title="select one option" layout="pageDirection" border="1">
+            <f:selectItem id="si11" itemLabel="Audi" itemValue="11"/>    
+            <f:selectItem id="si22" itemLabel="BMW" itemValue="22"/>  
+            <f:selectItem id="si33" itemLabel="Mercedes" itemValue="33"/>  
+            <f:selectItem id="si44" itemLabel="Suzuki" itemValue="44"/>  
+            <f:selectItem id="si55" itemLabel="Hundai" itemValue="55"/>
+            <f:selectItem id="si66" itemLabel="Volvo" itemValue="66"/>
+            </h:selectOneRadio>
+            
+            <h:outputText value="Select one or more options below:"/>
+            <h:selectManyCheckbox id="smc" value="Select Car Brand" title="this is 'selectManyCheckbox' demo" layout="lineDirection">
+            <f:selectItem id="si12" itemLabel="Audi" itemValue="11"/>    
+            <f:selectItem id="si23" itemLabel="BMW" itemValue="22"/>  
+            <f:selectItem id="si34" itemLabel="Mercedes" itemValue="33"/>  
+            <f:selectItem id="si45" itemLabel="Suzuki" itemValue="44"/>  
+            <f:selectItem id="si56" itemLabel="Hundai" itemValue="55"/>
+            <f:selectItem id="si17" itemLabel="Volvo" itemValue="66"/>
+            </h:selectManyCheckbox>
+            
+             <h:selectManyListbox id="subscription" value="Select Car Brand" title="select one or more options by pressing the ctrl key" size="5">
+            <f:selectItem id="si10" itemLabel="Audi" itemValue="11"/>    
+            <f:selectItem id="si20" itemLabel="BMW" itemValue="22"/>  
+            <f:selectItem id="si30" itemLabel="Mercedes" itemValue="33"/>  
+            <f:selectItem id="si40" itemLabel="Suzuki" itemValue="44"/>  
+            <f:selectItem id="si50" itemLabel="Hundai" itemValue="55"/>
+            <f:selectItem id="si60" itemLabel="Volvo" itemValue="66"/>
+            </h:selectManyListbox>
+
+             <h:selectManyMenu id="smm" value="Select Car Brand" title="select one or many items">
+            <f:selectItem id="si100" itemLabel="Audi" itemValue="11"/>    
+            <f:selectItem id="si200" itemLabel="BMW" itemValue="22"/>  
+            <f:selectItem id="si300" itemLabel="Mercedes" itemValue="33"/>  
+            <f:selectItem id="si400" itemLabel="Suzuki" itemValue="44"/>  
+            <f:selectItem id="si500" itemLabel="Hundai" itemValue="55"/>
+            <f:selectItem id="si600" itemLabel="Volvo" itemValue="66"/>
+            </h:selectManyMenu>
+            
+            <h:panelGrid columns="3" title="PanelGrid Demo">
+                <f:facet name="header">
+                    <h:outputText value="Fill Numbers below"/>
+                </f:facet>
+                <h:inputText/>
+                <h:inputText/>
+                <h:inputText/>
+                <h:inputText/>
+                <h:inputText/>
+                <h:inputText/>
+            </h:panelGrid>
+            <!-- panel group-->
+            <br/><br/><br/><br/>
+            <h:outputText value="Panel Group Demo"/>
+            <h:panelGrid columns="3" title="PanelGrid Demo">
+                <f:facet name="header">
+                    <h:outputText value="Fill Numbers below"/>
+                </f:facet>
+                <h:inputText/>
+                <h:inputText/>
+                <h:inputText/>
+                <h:inputText/>
+                <h:inputText/>
+                <h:inputText/>
+                <f:facet name="footer">
+                    <h:panelGroup>
+                        <h:outputText value="Comments: "/>
+                        <h:inputText/>
+                        <h:commandButton value="Submit"/>
+                    </h:panelGroup>
+                </f:facet>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
